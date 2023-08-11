@@ -1,0 +1,130 @@
+.Section {
+    width: 100%;
+    min-height: 92vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid rgb(185, 184, 184); */
+}
+.content-section , .images-section
+{
+    flex-basis: 50%;
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.content-section > div {
+    padding-left: 2rem;
+    padding-top: 5rem;
+}
+.content-section h2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: #777777;
+    font-weight: bold;
+}
+.content-section p {
+    color: #777777;
+    padding-top: 2rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+.content-section .btn {
+    display: flex;
+    flex-wrap: wrap; 
+    padding-top: 2rem;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+}
+.content-section button {
+    width: 8rem;
+    height: 2rem;
+    background-color: #1AA7EC;
+    color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.images-section {
+    padding-top: 5rem;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    
+}
+.images-section .phone-frame {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 2rem;
+    right: 23%;
+} 
+.images-section .pc-frame {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 9rem;
+    right: 19%;
+}
+.images-cercle {
+    width: 25rem;
+    height: 65vh;
+    border-radius: 50%;
+    background-color: #1AA7EC;
+}
+/* .Section.fade-in .content-section,
+.Section.fade-in .images-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 2s;
+}
+
+.Section.fade-in .content-section.fade-in,
+.Section.fade-in .images-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+@media (max-width: 815px) {
+    .Section {
+        display: block;
+    }
+    .content-section > div {
+        padding-left: 0.5rem;
+    }
+    .content-section h2 {
+        font-size: 1.7rem;
+    }
+    .images-section {
+        height: 80vh;
+    }
+    .content-section .btn {
+        min-width: 100%;
+        
+    }
+    .content-section , .images-section {
+        padding: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .images-cercle {
+        width: 23rem;
+        height: 60vh;
+    }
+    .images-section .phone-frame {
+        top: -1.5rem;
+        right: 27%;
+    } 
+    .images-section .pc-frame {
+        
+        top: 4rem;
+        right: 16%;
+    }
+    
+}
