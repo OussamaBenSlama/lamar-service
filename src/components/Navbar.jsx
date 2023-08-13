@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
+import NavbarSlider from './NavbarSlider'
 
 
 const Navbar = () => {
@@ -12,6 +13,15 @@ const Navbar = () => {
   const [navState, setNavState] = useState(false);
   const navigate = useNavigate();
   
+  const goHome = ()=> {
+    navigate('/')
+  }
+  const goAbout = ()=> {
+    navigate('/about')
+  }
+  const goContact = ()=> {
+    navigate('/contact')
+  }
 
   const trackWindowWidth = () => {
     if (window.innerWidth <= 800) {
@@ -43,14 +53,21 @@ const Navbar = () => {
             />
           
         ) : null}
+        {navState && showButton ? (
+          <React.Fragment>
+            <div className="show-nav">
+              <NavbarSlider setNavState={setNavState} />
+            </div>
+          </React.Fragment>
+        ) : null}
       <h1 style={{ color: '#1AA7EC' }}>
         Lamar-Service
       </h1>
       <div className='Navbar'>
         <ul>
-          <li >Home</li>
-          <li >About</li>
-          <li>Contact me</li>
+          <li onClick={goHome}>Home</li>
+          <li onClick={goAbout}>About us</li>
+          <li onClick={goContact}>Contact us</li>
         </ul>
         
       </div>
