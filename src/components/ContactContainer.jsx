@@ -1,6 +1,6 @@
 import React from 'react';
 import './Style/ContactContainer.css';
-import isimm from '../images/isimm.jpeg';
+import contactImg from '../images/building.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -65,7 +65,7 @@ const ContactContainer = () => {
       </div>
       <div className='contact'>
         <div className='left-side' ref={leftSideRef}>
-          <img src={isimm} alt="" />
+          <img src={contactImg} alt="" />
         </div>
         <div className='right-side'>
           <motion.div

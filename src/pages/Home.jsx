@@ -4,6 +4,7 @@ import Section from '../components/Section'
 import Features from '../components/Features'
 import MobilePatient from '../components/MobilePatient'
 import MobileDoctor from '../components/MobileDoctor'
+import WebDoctor from '../components/WebDoctor'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Features/>
         <MobilePatient/>
         <MobileDoctor/>
+        <WebDoctor/>
     </React.Fragment>
   )
 }

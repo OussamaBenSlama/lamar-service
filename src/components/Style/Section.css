@@ -53,7 +53,7 @@
 }
 .images-section {
     padding-top: 5rem;
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 90vh;
     
@@ -61,22 +61,26 @@
 .images-section .phone-frame {
     max-width: 100%;
     max-height: 100%;
-    position: absolute;
+    border-radius: 1.2rem;
+    /* position: absolute;
     top: 2rem;
-    right: 23%;
+    right: 23%; */
 } 
 .images-section .pc-frame {
     max-width: 100%;
-    max-height: 100%;
-    position: absolute;
+    max-height: 50%;
+    margin-top: 20%;
+    /* position: absolute;
     top: 9rem;
-    right: 19%;
+    right: 19%; */
 }
 .images-cercle {
     width: 25rem;
     height: 65vh;
     border-radius: 50%;
     background-color: #1AA7EC;
+    display: flex;
+    justify-content: center;
 }
 /* .Section.fade-in .content-section,
 .Section.fade-in .images-section {
@@ -93,7 +97,8 @@
 
 @media (max-width: 815px) {
     .Section {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
     }
     .content-section > div {
         padding-left: 0.5rem;
@@ -112,12 +117,13 @@
         padding: 0.5rem;
         width: 100%;
         margin-top: 1rem;
+        flex-basis: 100%;
     }
     .images-cercle {
         width: 23rem;
         height: 60vh;
     }
-    .images-section .phone-frame {
+    /* .images-section .phone-frame {
         top: -1.5rem;
         right: 27%;
     } 
@@ -125,6 +131,6 @@
         
         top: 4rem;
         right: 16%;
-    }
+    } */
     
 }

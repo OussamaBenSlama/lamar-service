@@ -56,4 +56,8 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .Features .Card {
+        width: 35rem;
+        height: 20rem;
+    }
 }

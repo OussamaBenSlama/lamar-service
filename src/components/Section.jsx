@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Style/Section.css';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import pc1 from '../images/pc1.png';
-import phone from '../images/phone.png';
+import phone4 from '../images/phone4.png';
+import phone5 from '../images/phone5.png';
+
 
 const Section = () => {
-  const images = [phone, pc1];
+  const images = [phone4, phone5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
   const targetText = 'Glycemia Management';
@@ -86,7 +87,7 @@ const Section = () => {
           animate={imagesControls}
           transition={{ duration: 1 }}
         >
-          <div className="images-cercle"></div>
+          <div className="images-cercle">
           {images.map((image, index) => (
             <img
               key={index}
@@ -95,9 +96,11 @@ const Section = () => {
               style={{
                 display: index === currentImageIndex ? 'block' : 'none',
               }}
-              className={index === 0 ? 'phone-frame' : 'pc-frame'}
+              // className={index === 0 ? 'phone-frame' : 'pc-frame'}
+              className='phone-frame'
             />
           ))}
+          </div>
         </motion.div>
       </div>
     </div>
