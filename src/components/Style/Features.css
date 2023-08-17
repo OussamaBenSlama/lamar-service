@@ -48,9 +48,9 @@
 }
 
 @media (max-width: 768px) {
-    .Main {
+    /* .Main {
         text-align: center;
-    }
+    } */
     .Features {
         display: flex;
         flex-wrap: wrap;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Style/NavbarSlider.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link } from "react-router-dom";
 
 
 const NavbarSlider = ({setNavState}) => {
@@ -36,6 +36,9 @@ const NavbarSlider = ({setNavState}) => {
           <div className="nav-element">
             <ul>
                 <li onClick={goHome}>Home</li>
+                <Link to= "http://www.glucocheck.tn/">
+                  <li >Sign Up</li>
+                </Link>
                 <li onClick={goAbout}>About us</li>
                 <li onClick={goContact}>Contact us</li>
             </ul>

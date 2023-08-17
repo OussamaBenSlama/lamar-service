@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import phone4 from '../images/phone10.png';
-import phone5 from '../images/phone5.png';
+import phone5 from '../images/phone11.png';
 import './Style/Service.css';
 
 const MobilePatient = () => {

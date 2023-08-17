@@ -3,9 +3,9 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import pc1 from '../images/pc1.png';
-import pc2 from '../images/pc2.png';
-import pc3 from '../images/pc3.png';
+import pc1 from '../images/pc4.png';
+import pc2 from '../images/pc5.png';
+import pc3 from '../images/pc6.png';
 import './Style/Service.css';
 
 const WebDoctor = () => {
@@ -42,27 +42,27 @@ const WebDoctor = () => {
 
   return (
     <div className='Service-container'>
-      <div className='Service'>
+      <div className='Service' style={{display:'block'}}>
         <motion.div
           ref={leftSideRef}
           initial="hidden"
           animate={contentControls}
           variants={variants}
-          className='left-side img'
+          className='left-side '
+          style={{display:'flex',justifyContent:'center',alignItems:'center',paddingBottom:'3rem'}}
         >
-          {images.map((image, index) => (
+           {images.map((image, index) => (
             <img
               key={index}
               src={image}
               alt={` ${index + 1}`}
               style={{
                 display: index === currentImageIndex ? 'block' : 'none',
-                
-                maxWidth:'99%'
+                maxWidth:'100%'
               }}
               
             />
-          ))}
+          ))} 
         </motion.div>
         <motion.div
           ref={rightSideRef}
@@ -70,6 +70,7 @@ const WebDoctor = () => {
           animate={contentControls}
           variants={variants}
           className='right-side'
+          
         >
           <p>As a <span>doctor</span> you can use our web application for more features :</p>
           <motion.ul

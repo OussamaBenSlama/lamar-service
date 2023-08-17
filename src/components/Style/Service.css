@@ -15,23 +15,25 @@
 }
 .Service {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .left-side , .right-side {
     flex-basis: 50%;
-    min-height: 70vh;
+    min-height: 80vh;
 }
 .img {
     background-color: #1AA7EC;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    padding: 1rem;
 }
 .Service img {
-    height: 60vh;
+    height: 80vh;
 }
 .Service p {
     padding: 1rem;
@@ -69,6 +71,8 @@
     }
     .left-side ,.right-side {
         flex-basis: 100%;
+        height: auto;
+        padding: 1.5rem;
     }
     .Service p {
         font-size: 1rem;
