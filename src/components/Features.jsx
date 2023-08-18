@@ -1,9 +1,12 @@
-import React from 'react';
+import React ,{useEffect,useState} from 'react';
 import './Style/Features.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faSearch, faLineChart } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 
 const FeatureCard = ({ icon, title, description }) => {
   const [ref, inView] = useInView({
@@ -31,29 +34,40 @@ const FeatureCard = ({ icon, title, description }) => {
 };
 
 const Features = () => {
+  const { lang, setLang } = useGlobalContext();
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
+  
   const featureData = [
     {
       icon: faExchangeAlt,
-      title: 'Data Sharing',
-      description: 'Allow patients to securely share their glycemia data with doctors and vice versa for better monitoring.',
+      title: data.features?.cardone?.title,
+      description: data.features?.cardone?.description,
     },
     {
       icon: faSearch,
-      title: 'Search and Filters',
-      description: 'Provide search and filtering options to quickly locate patient records, appointments, and other information.',
+      title: data.features?.cardtwo?.title,
+      description: data.features?.cardtwo?.description,
     },
     {
       icon: faLineChart,
-      title: 'Reports and Analytics',
-      description: 'Generate comprehensive reports and analytics for doctors and patients to monitor progress and trends.',
+      title: data.features?.cardthree?.title,
+      description: data.features?.cardthree?.description,
     },
   ];
 
   return (
     <div className='Main'>
       <div className="HeaderFeatures">
-        <h1>Main Features</h1>
-        <p>Why should you use our application?</p>
+        <h1>{data.features?.header?.title}</h1>
+        <p>{data.features?.header?.description}</p>
       </div>
       <div className='Features'>
         {featureData.map((feature, index) => (

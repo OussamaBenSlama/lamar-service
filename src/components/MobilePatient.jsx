@@ -3,6 +3,9 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 import phone4 from '../images/phone10.png';
 import phone5 from '../images/phone11.png';
 import './Style/Service.css';
@@ -11,6 +14,17 @@ const MobilePatient = () => {
   const images = [phone4, phone5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const { lang, setLang } = useGlobalContext();
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
+ console.log(data.mobilePatient)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -43,7 +57,7 @@ const MobilePatient = () => {
   return (
     <div className='Service-container'>
       <div className="Header-service">
-        <h1>Read more about our Services</h1>
+        <h1>{data?.mobilePatient?.header}</h1>
       </div>
       <div className='Service'>
         <motion.div
@@ -74,7 +88,7 @@ const MobilePatient = () => {
           variants={variants}
           className='right-side'
         >
-          <p>As a <span>patient</span> you can use our mobile application to :</p>
+          <p>{data.mobilePatient?.title1} <span>{data.mobilePatient?.span}</span> {data.mobilePatient?.title2}</p>
           <motion.ul
             initial={{ opacity: 0 }}
             animate={contentControls}
@@ -82,15 +96,15 @@ const MobilePatient = () => {
           >
             <motion.li variants={variants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Glycemia Tracking:</span> Allow patients to record and track their glycemia levels over time, storing the data for analysis and sharing with doctors.
+              <span>{data.mobilePatient?.item1?.span}</span> {data.mobilePatient?.item1?.content}
             </motion.li>
             <motion.li variants={variants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Appointment Scheduling:</span> Enable patients to schedule appointments with doctors, receive reminders, and manage their medical calendar.
+              <span>{data.mobilePatient?.item2?.span}</span> {data.mobilePatient?.item2?.content}
             </motion.li>
             <motion.li variants={variants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Health Dashboard:</span> Provide a personalized dashboard displaying glycemia trends, historical data, and insights to help patients manage their condition effectively.
+              <span>{data.mobilePatient?.item3?.span}</span> {data.mobilePatient?.item3?.content}
             </motion.li>
           </motion.ul>
         </motion.div>

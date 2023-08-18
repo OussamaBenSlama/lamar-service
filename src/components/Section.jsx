@@ -23,6 +23,7 @@ const Section = () => {
       setData(frData);
     }
   }, [lang]);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -65,6 +66,7 @@ const Section = () => {
   }, []);
   
   
+  
 
   return (
     <div className="Section">
@@ -77,7 +79,7 @@ const Section = () => {
           <div>
             <h2>
               {data.sectionHeader1}{' '}
-              <span style={{ color: '#1AA7EC' }}>Your Partner in {typedText}</span>
+              <span style={{ color: '#1AA7EC' }}>{data.sectionHeader2}{typedText}</span>
             </h2>
             <p>
                 {data.sectionDescription}

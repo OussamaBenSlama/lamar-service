@@ -1,8 +1,50 @@
 {
-    "sectionHeader1": "Renforcer la santé grâce aux données :",
-    "sectionHeader2": "Votre partenaire en",
-    "targetText": "Gestion de la glycémie",
-    "sectionDescription": "Bienvenue sur notre plateforme révolutionnaire conçue pour transformer la manière dont les médecins et les patients gèrent leur glycémie. Notre plateforme offre une expérience transparente tant pour les médecins que pour les patients, en mettant à votre disposition des outils avancés et des analyses basées sur les données.",
-    "sectionBtn1": "Télécharger",
-    "sectionBtn2": "Vue en direct"
+  "navbar": {
+    "home": "Accueil",
+    "sign": "S'inscrire",
+    "about": "À propos de nous",
+    "contact": "Nous contacter"
+  },
+  "sectionHeader1": "Autonomisation de la santé par les données:",
+  "sectionHeader2": "Votre partenaire en ",
+  "targetText": "Gestion de la glycémie",
+  "sectionDescription": "Bienvenue sur notre plateforme révolutionnaire conçue pour transformer la manière dont les médecins et les patients gèrent la glycémie. Notre plateforme offre une expérience fluide aussi bien aux médecins qu'aux patients, en mettant à leur disposition des outils avancés et des informations basées sur les données, directement à portée de main.",
+  "sectionBtn1": "Télécharger",
+  "sectionBtn2": "Aperçu en direct",
+  "features": {
+    "header": {
+      "title": "Fonctionnalités principales",
+      "description": "Pourquoi devriez-vous utiliser notre application?"
+    },
+    "cardone": {
+      "title": "Partage de données",
+      "description": "Permettez aux patients de partager en toute sécurité leurs données de glycémie avec les médecins, et vice versa, pour un meilleur suivi."
+    },
+    "cardtwo": {
+      "title": "Recherche et filtres",
+      "description": "Offrez des options de recherche et de filtrage pour localiser rapidement les dossiers des patients, les rendez-vous et autres informations."
+    },
+    "cardthree": {
+      "title": "Rapports et analyses",
+      "description": "Générez des rapports et des analyses complets pour les médecins et les patients afin de suivre les progrès et les tendances."
+    }
+  },
+  "mobilePatient": {
+    "header": "En savoir plus sur nos services",
+    "title1": "En tant que ",
+    "span": "patient ",
+    "title2": "vous pouvez utiliser notre application mobile pour :",
+    "item1": {
+      "span": "Suivi de la glycémie :",
+      "content": "Permettez aux patients d'enregistrer et de suivre leurs niveaux de glycémie au fil du temps, en stockant les données pour l'analyse et le partage avec les médecins."
+    },
+    "item2": {
+      "span": "Planification des rendez-vous :",
+      "content": "Permettez aux patients de planifier des rendez-vous avec les médecins, de recevoir des rappels et de gérer leur calendrier médical."
+    },
+    "item3": {
+      "span": "Tableau de bord de santé :",
+      "content": "Fournissez un tableau de bord personnalisé affichant les tendances de la glycémie, les données historiques et les informations pour aider les patients à gérer leur état de manière efficace."
+    }
+  }
 }

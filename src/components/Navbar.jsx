@@ -5,12 +5,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavbarSlider from './NavbarSlider';
 import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 
 const Navbar = () => {
   const [showButton, setShowButton] = useState(false);
   const [navState, setNavState] = useState(false);
   const { lang, setLang } = useGlobalContext();
   const navigate = useNavigate();
+
+  
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
 
   const goHome = () => {
     navigate('/');
@@ -64,12 +77,12 @@ const Navbar = () => {
       <h1 style={{ color: '#1AA7EC' }}>GlucoCheck</h1>
       <div className='Navbar'>
         <ul>
-          <li onClick={goHome}>Home</li>
+          <li onClick={goHome}>{data.navbar?.home}</li>
           <Link to='http://www.glucocheck.tn/'>
-            <li>Sign Up</li>
+            <li>{data.navbar?.sign}</li>
           </Link>
-          <li onClick={goAbout}>About us</li>
-          <li onClick={goContact}>Contact us</li>
+          <li onClick={goAbout}>{data.navbar?.about}</li>
+          <li onClick={goContact}>{data.navbar?.contact}</li>
         </ul>
         <select value={lang} onChange={handleLangChange}>
           <option value='en'>English</option>

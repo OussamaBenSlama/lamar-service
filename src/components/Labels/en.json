@@ -1,8 +1,55 @@
 {
+    "navbar" : {
+        "home": "Home",
+        "sign" : "Sign up",
+        "about" : "About us",
+        "contact": "contact us"
+    } ,
+
     "sectionHeader1": "Empowering Health through Data:",
-    "sectionHeader2": "Your Partner in",
+    "sectionHeader2": "Your Partner in ",
     "targetText": "Glycemia Management",
     "sectionDescription": "Welcome to our groundbreaking platform designed to revolutionize the way doctors and patients manage glycemia. Our platform provides a seamless experience for doctors and patients alike, bringing advanced tools and data-driven insights right to your fingertips",
     "sectionBtn1": "Download",
-    "sectionBtn2": "Live view" 
+    "sectionBtn2": "Live view" ,
+
+    "features" : {
+        "header" : {
+            "title" : "Main Features" ,
+            "description": "Why should you use our application?"
+        } ,
+        "cardone" : {
+            "title" : "Data Sharing" ,
+            "description": "Allow patients to securely share their glycemia data with doctors and vice versa for better monitoring."
+        } ,
+        "cardtwo" : {
+            "title" : "Search and Filters" ,
+            "description": "Provide search and filtering options to quickly locate patient records, appointments, and other information."
+        } ,
+        "cardthree" : {
+            "title" : "Reports and Analytics" ,
+            "description": "Generate comprehensive reports and analytics for doctors and patients to monitor progress and trends."
+        }
+    } ,
+
+    "mobilePatient": {
+        "header": "Read more about our Services" ,
+        "title1" : "as a " ,
+        "span" : "patient " ,
+        "title2" : "you can use our mobile application to :" ,
+
+        "item1" : {
+            "span" : "Glycemia Tracking:",
+            "content" : "Allow patients to record and track their glycemia levels over time, storing the data for analysis and sharing with doctors."
+        } ,
+        "item2" : {
+            "span" : "Appointment Scheduling:",
+            "content" : "Enable patients to schedule appointments with doctors, receive reminders, and manage their medical calendar."
+        } ,
+        "item3" : {
+            "span" : "Health Dashboard:",
+            "content" : "Provide a personalized dashboard displaying glycemia trends, historical data, and insights to help patients manage their condition effectively."
+        }
+    }
+
 }
