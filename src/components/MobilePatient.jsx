@@ -24,7 +24,7 @@ const MobilePatient = () => {
       setData(frData);
     }
   }, [lang]);
- console.log(data.mobilePatient)
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);

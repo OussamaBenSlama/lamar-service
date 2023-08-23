@@ -1,10 +1,25 @@
-import React from 'react';
+import React , {useState,useEffect} from 'react';
 import aboutImg from '../images/aboutImg.jpg';
 import './Style/Section.css';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 
 const AboutContainer = () => {
+
+  const { lang, setLang } = useGlobalContext();
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
+
   const [contentRef, contentInView] = useInView({
     triggerOnce: true, // Animation triggers only once
     threshold: 0.2,    // Animation starts when 20% of the element is visible
@@ -24,12 +39,9 @@ const AboutContainer = () => {
           variants={contentVariants}
         >
           <div>
-            <h2>About Us</h2>
+            <h2>{data.about?.header}</h2>
             <p>
-              Lamar Service is a pioneering tech company specializing in
-              crafting cutting-edge web and mobile applications. With a
-              fervent dedication to innovation and an unwavering commitment
-              to quality, we harness our expertise to bring your ideas to life.
+            {data.about?.content}
             </p>
           </div>
         </motion.div>

@@ -7,6 +7,8 @@ import NavbarSlider from './NavbarSlider';
 import { useGlobalContext } from './GlobalProvider';
 import enData from './Labels/en.json';
 import frData from './Labels/fr.json'
+import fr from '../images/fr.png'
+import br from '../images/br.png'
 
 const Navbar = () => {
   const [showButton, setShowButton] = useState(false);
@@ -52,8 +54,7 @@ const Navbar = () => {
 
   window.addEventListener('resize', trackWindowWidth);
 
-  const handleLangChange = (event) => {
-    const selectedLang = event.target.value;
+  const handleLangChange = (selectedLang) => {
     setLang(selectedLang);
   };
 
@@ -71,23 +72,63 @@ const Navbar = () => {
         <React.Fragment>
           <div className='show-nav'>
             <NavbarSlider setNavState={setNavState} />
+            
           </div>
         </React.Fragment>
       ) : null}
       <h1 style={{ color: '#1AA7EC' }}>GlucoCheck</h1>
+      {!navState && showButton ? 
+      (
+        <div style={{display:'flex'}}>
+          <span
+            className={lang === 'fr' ? 'language-selected' : 'language'}
+            onClick={() => handleLangChange('fr')}
+            title="Français"
+          >
+            <img src={fr} alt="" />
+          </span>
+          <span
+            className={lang === 'en' ? 'language-selected' : 'language'}
+            onClick={() => handleLangChange('en')}
+            title="English"
+          >
+            <img src={br} alt="" />
+          </span>
+        </div>
+      ) :
+      (
+        null
+      )
+
+      }
       <div className='Navbar'>
         <ul>
           <li onClick={goHome}>{data.navbar?.home}</li>
-          <Link to='http://www.glucocheck.tn/'>
-            <li>{data.navbar?.sign}</li>
-          </Link>
           <li onClick={goAbout}>{data.navbar?.about}</li>
           <li onClick={goContact}>{data.navbar?.contact}</li>
         </ul>
-        <select value={lang} onChange={handleLangChange}>
-          <option value='en'>English</option>
-          <option value='fr'>Français</option>
-        </select>
+        <div style={{display:'flex'}}>
+          <span
+            className={lang === 'fr' ? 'language-selected' : 'language'}
+            onClick={() => handleLangChange('fr')}
+            title="Français"
+          >
+            <img src={fr} alt="" />
+          </span>
+          <span
+            className={lang === 'en' ? 'language-selected' : 'language'}
+            onClick={() => handleLangChange('en')}
+            title="English"
+          >
+            <img src={br} alt="" />
+          </span>
+        </div>
+
+        <button>
+          <Link to='http://www.glucocheck.tn/' style={{textDecoration:'none',color:'white'}}>
+            {data.navbar?.sign}
+          </Link>
+        </button>
       </div>
     </div>
   );

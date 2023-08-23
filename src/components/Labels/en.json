@@ -1,17 +1,16 @@
 {
     "navbar" : {
         "home": "Home",
-        "sign" : "Sign up",
+        "sign" : "Sign in",
         "about" : "About us",
         "contact": "contact us"
     } ,
 
     "sectionHeader1": "Empowering Health through Data:",
-    "sectionHeader2": "Your Partner in ",
-    "targetText": "Glycemia Management",
+    "sectionHeader2": "Your Partner in Glycemia Management",
     "sectionDescription": "Welcome to our groundbreaking platform designed to revolutionize the way doctors and patients manage glycemia. Our platform provides a seamless experience for doctors and patients alike, bringing advanced tools and data-driven insights right to your fingertips",
     "sectionBtn1": "Download",
-    "sectionBtn2": "Live view" ,
+    "sectionBtn2": "Demonstration" ,
 
     "features" : {
         "header" : {
@@ -32,6 +31,24 @@
         }
     } ,
 
+    "mobileDoctor": {
+        "title1" : "as a " ,
+        "span" : "doctor " ,
+        "title2" : "you can use our mobile application to :" ,
+
+        "item1" : {
+            "span" : "Patient Management:",
+            "content" : "Allow doctors to access and manage patient profiles, including medical history, test results, and treatment plans."
+        } ,
+        "item2" : {
+            "span" : "Customized Treatment Plans:",
+            "content" : "Create personalized treatment plans for each patient based on their medical history, glycemia data, and lifestyle factors."
+        } ,
+        "item3" : {
+            "span" : "Data Analysis:",
+            "content" : "Provide tools to analyze patients' glycemia data, identify trends, and make informed decisions about treatment adjustments."
+        }
+    } ,
     "mobilePatient": {
         "header": "Read more about our Services" ,
         "title1" : "as a " ,
@@ -43,13 +60,65 @@
             "content" : "Allow patients to record and track their glycemia levels over time, storing the data for analysis and sharing with doctors."
         } ,
         "item2" : {
-            "span" : "Appointment Scheduling:",
-            "content" : "Enable patients to schedule appointments with doctors, receive reminders, and manage their medical calendar."
+            "span" : "Real-Time Communication:",
+            "content" : "Facilitate secure and private real-time text chat between doctors and patients for  follow-ups, and discussions."
         } ,
         "item3" : {
             "span" : "Health Dashboard:",
             "content" : "Provide a personalized dashboard displaying glycemia trends, historical data, and insights to help patients manage their condition effectively."
         }
-    }
+    } ,
+    "webDoctor": {
+        "title1" : "as a " ,
+        "span" : "doctor " ,
+        "title2" : "you can use our web application for more features :" ,
+
+        "item1" : {
+            "span" : "Enhanced Data Visualization:",
+            "content" : "Provide more advanced data visualization tools such as interactive charts, graphs, and trends to help doctors analyze glycemia data more effectively."
+        } ,
+        "item2" : {
+            "span" : "Multi-Patient Management:",
+            "content" : "Allow doctors to manage and monitor multiple patients' glycemia data from a single dashboard, making it easier to track trends and patterns across patients."
+        } ,
+        "item3" : {
+            "span" : "Patient Comparison:",
+            "content" : "Enable doctors to compare the glycemia data of multiple patients side by side, helping them identify similarities and differences in their conditions."
+        }
+    } ,
+    "admin": {
+        "title1" : "For more functionalities a doctor can sign up as an " ,
+        "span" : "Administrator " ,
+        "title2" : "to :" ,
+
+        "item1" : {
+            "span" : "Doctor and Patient Management:",
+            "content" : "The Administrator can efficiently manage the network of doctors and patients registered in the app. This includes the ability to onboard new doctors and patients, review their profiles,and manage their access levels to the app's functionalities."
+        } ,
+        "item2" : {
+            "span" : "Service and Specialty Addition:",
+            "content" : "Administrators can enrich the app's offerings by adding new medical services and specialties. This empowers doctors to provide comprehensive healthcare solutions to their patients and enables patients to find the specialized care they need easily."
+        } ,
+        "item3" : {
+            "span" : "Flexibility and Adaptability:",
+            "content" : "The app's Administrator features are designed to adapt to the evolving healthcare landscape. As medical practices and patient needs change, administrators can seamlessly modify the app's settings to accommodate new requirements."
+        }
+    } ,
+    "about" : {
+      "header" : "About Us" ,
+      "content" : "Lamar Service is a pioneering tech company specializing in crafting cutting-edge web and mobile applications. With a fervent dedication to innovation and an unwavering commitment to quality, we harness our expertise to bring your ideas to life."
+    } ,
+    "contact" : {
+        "header" : "Contact Us" ,
+        "content" : "via our social media" 
+    },
+    "navbarSlider" : {
+        "home": "Home",
+        "sign" : "Sign up",
+        "about" : "About us",
+        "contact": "contact us"
+    } 
+
+
 
 }

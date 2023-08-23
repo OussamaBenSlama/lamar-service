@@ -1,16 +1,15 @@
 {
   "navbar": {
     "home": "Accueil",
-    "sign": "S'inscrire",
-    "about": "À propos de nous",
-    "contact": "Nous contacter"
+    "sign": "Se connecter",
+    "about": "À propos ",
+    "contact": "Contactez nous"
   },
   "sectionHeader1": "Autonomisation de la santé par les données:",
-  "sectionHeader2": "Votre partenaire en ",
-  "targetText": "Gestion de la glycémie",
+  "sectionHeader2": "Votre partenaire en Gestion de la glycémie",
   "sectionDescription": "Bienvenue sur notre plateforme révolutionnaire conçue pour transformer la manière dont les médecins et les patients gèrent la glycémie. Notre plateforme offre une expérience fluide aussi bien aux médecins qu'aux patients, en mettant à leur disposition des outils avancés et des informations basées sur les données, directement à portée de main.",
   "sectionBtn1": "Télécharger",
-  "sectionBtn2": "Aperçu en direct",
+  "sectionBtn2": "Démonstration",
   "features": {
     "header": {
       "title": "Fonctionnalités principales",
@@ -29,6 +28,23 @@
       "description": "Générez des rapports et des analyses complets pour les médecins et les patients afin de suivre les progrès et les tendances."
     }
   },
+  "mobileDoctor": {
+    "title1": "En tant que ",
+    "span": "médecin ",
+    "title2": "vous pouvez utiliser notre application mobile pour :",
+    "item1": {
+      "span": "Gestion des patients :",
+      "content": "Permettez aux médecins d'accéder et de gérer les profils des patients, y compris l'historique médical, les résultats des tests et les plans de traitement."
+    },
+    "item2": {
+      "span": "Plans de traitement personnalisés :",
+      "content": "Créez des plans de traitement personnalisés pour chaque patient en fonction de son historique médical, de ses données de glycémie et de ses facteurs de mode de vie."
+    },
+    "item3": {
+      "span": "Analyse des données :",
+      "content": "Fournissez des outils pour analyser les données de glycémie des patients, identifier les tendances et prendre des décisions éclairées concernant les ajustements de traitement."
+    }
+  },
   "mobilePatient": {
     "header": "En savoir plus sur nos services",
     "title1": "En tant que ",
@@ -38,13 +54,61 @@
       "span": "Suivi de la glycémie :",
       "content": "Permettez aux patients d'enregistrer et de suivre leurs niveaux de glycémie au fil du temps, en stockant les données pour l'analyse et le partage avec les médecins."
     },
-    "item2": {
-      "span": "Planification des rendez-vous :",
-      "content": "Permettez aux patients de planifier des rendez-vous avec les médecins, de recevoir des rappels et de gérer leur calendrier médical."
-    },
+    "item2" : {
+      "span" : "Communication en Temps Réel :",
+      "content" : "Facilitez des discussions textuelles sécurisées et privées en temps réel entre les médecins et les patients pour les suivis et les discussions."
+      },
     "item3": {
       "span": "Tableau de bord de santé :",
       "content": "Fournissez un tableau de bord personnalisé affichant les tendances de la glycémie, les données historiques et les informations pour aider les patients à gérer leur état de manière efficace."
     }
+  },
+  "webDoctor": {
+    "title1": "En tant que ",
+    "span": "médecin ",
+    "title2": "vous pouvez utiliser notre application web pour plus de fonctionnalités :",
+    "item1": {
+      "span": "Visualisation avancée des données :",
+      "content": "Fournissez des outils de visualisation avancée des données, tels que des graphiques interactifs, des courbes et des tendances, pour aider les médecins à analyser plus efficacement les données de glycémie."
+    },
+    "item2": {
+      "span": "Gestion de plusieurs patients :",
+      "content": "Permettez aux médecins de gérer et de surveiller les données de glycémie de plusieurs patients depuis un seul tableau de bord, facilitant le suivi des tendances et des modèles entre les patients."
+    },
+    "item3": {
+      "span": "Comparaison des patients :",
+      "content": "Permettez aux médecins de comparer les données de glycémie de plusieurs patients côte à côte, les aidant ainsi à identifier les similitudes et les différences dans leurs conditions."
+    }
+  },
+  "admin": {
+    "title1": "Pour plus de fonctionnalités, un médecin peut s'inscrire en tant qu' ",
+    "span": "administrateur ",
+    "title2": "pour :",
+    "item1": {
+      "span": "Gestion des médecins et des patients :",
+      "content": "L'administrateur peut gérer efficacement le réseau de médecins et de patients inscrits dans l'application. Cela inclut la possibilité d'accueillir de nouveaux médecins et patients, d'examiner leurs profils et de gérer leurs niveaux d'accès aux fonctionnalités de l'application."
+    },
+    "item2": {
+      "span": "Ajout de services et de spécialités :",
+      "content": "Les administrateurs peuvent enrichir les offres de l'application en ajoutant de nouveaux services médicaux et spécialités. Cela permet aux médecins de fournir des solutions de soins de santé complètes à leurs patients et permet aux patients de trouver facilement les soins spécialisés dont ils ont besoin."
+    },
+    "item3": {
+      "span": "Flexibilité et adaptabilité :",
+      "content": "Les fonctionnalités d'administration de l'application sont conçues pour s'adapter à l'évolution du paysage des soins de santé. À mesure que les pratiques médicales et les besoins des patients évoluent, les administrateurs peuvent modifier en toute transparence les paramètres de l'application pour répondre aux nouvelles exigences."
+    }
+  },
+  "about": {
+    "header": "À propos de nous",
+    "content": "Lamar Service est une entreprise technologique pionnière spécialisée dans la création d'applications web et mobiles de pointe. Avec un dévouement fervent à l'innovation et un engagement inébranlable envers la qualité, nous mettons à profit notre expertise pour donner vie à vos idées."
+  },
+  "contact": {
+    "header": "Contactez nous",
+    "content": "via nos réseaux sociaux"
+  },
+  "navbarSlider": {
+    "home": "Accueil",
+    "sign": "S'inscrire",
+    "about": "À propos ",
+    "contact": "Contactez nous"
   }
 }

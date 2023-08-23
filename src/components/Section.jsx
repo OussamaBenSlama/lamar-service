@@ -51,19 +51,7 @@ const Section = () => {
     }
   }, [imagesInView, imagesControls]);
 
-  useEffect(() => {
-    let charIndex = 0;
-    let typingInterval;
-  
-    const typeCharacter = () => {
-      setTypedText(data?.targetText?.substring(0, charIndex));
-      charIndex = (charIndex + 1) % (data?.targetText?.length + 1);
-    };
-  
-    typingInterval = setInterval(typeCharacter, 400);
-  
-    return () => clearInterval(typingInterval);
-  }, []);
+ 
   
   
   
@@ -79,7 +67,7 @@ const Section = () => {
           <div>
             <h2>
               {data.sectionHeader1}{' '}
-              <span style={{ color: '#1AA7EC' }}>{data.sectionHeader2}{typedText}</span>
+              <span style={{ color: '#1AA7EC' }}>{data.sectionHeader2}</span>
             </h2>
             <p>
                 {data.sectionDescription}

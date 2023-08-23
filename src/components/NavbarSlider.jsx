@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import "./Style/NavbarSlider.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import { useNavigate ,Link } from "react-router-dom";
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 
 
 const NavbarSlider = ({setNavState}) => {
-  const navigate = useNavigate()
+  const { lang, setLang } = useGlobalContext();
+  const navigate = useNavigate();
+
+  
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
   const goHome = () => {
         navigate('/');
   };
@@ -35,12 +50,12 @@ const NavbarSlider = ({setNavState}) => {
           </div>
           <div className="nav-element">
             <ul>
-                <li onClick={goHome}>Home</li>
-                <Link to= "http://www.glucocheck.tn/">
-                  <li >Sign Up</li>
+                <li onClick={goHome}>{data.navbarSlider?.home}</li>
+                <Link to= "http://www.glucocheck.tn/" style={{textDecoration:'none'}}>
+                  <li >{data.navbarSlider?.sign}</li>
                 </Link>
-                <li onClick={goAbout}>About us</li>
-                <li onClick={goContact}>Contact us</li>
+                <li onClick={goAbout}>{data.navbarSlider?.about}</li>
+                <li onClick={goContact}>{data.navbarSlider?.contact}</li>
             </ul>
             
             

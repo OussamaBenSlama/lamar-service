@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 import pc1 from '../images/pc7.png';
 import pc2 from '../images/pc8.png';
 import pc3 from '../images/pc9.png'
@@ -11,6 +14,17 @@ import './Style/Service.css';
 const Administrator = () => {
   const images = [pc1, pc2,pc3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const { lang, setLang } = useGlobalContext();
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,7 +91,7 @@ const Administrator = () => {
           className='right-side '
         >
           
-          <p>For more functionalities a doctor can sign up as an <span>Administrator</span> :</p>
+          <p>{data.admin?.title1}<span>{data.admin?.span}</span> {data.admin?.title2}</p>
           <motion.ul
             initial="hidden"
             animate={leftSideInView ? 'visible' : 'hidden'}
@@ -86,18 +100,15 @@ const Administrator = () => {
           >
             <motion.li variants={listItemVariants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Doctor and Patient Management:</span> The Administrator can efficiently manage the network of doctors and patients registered in the app. This includes the ability to onboard new doctors and patients, review their profiles,
-               and manage their access levels to the app's functionalities.
+              <span>{data.admin?.item1.span}</span> {data.admin?.item1.content}
             </motion.li>
             <motion.li variants={listItemVariants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Service and Specialty Addition:</span> Administrators can enrich the app's offerings by adding new medical services and specialties. This empowers doctors to provide comprehensive healthcare solutions to their patients and
-               enables patients to find the specialized care they need easily.
+              <span>{data.admin?.item2.span}</span> {data.admin?.item2.content}
             </motion.li>
             <motion.li variants={listItemVariants}>
               <FontAwesomeIcon icon={faCheckCircle} color='#DAA520' size='2x' style={{ marginRight: '1rem' }} />
-              <span>Flexibility and Adaptability:</span> The app's Administrator features are designed to adapt to the evolving healthcare landscape. As medical practices and patient needs change, administrators 
-              can seamlessly modify the app's settings to accommodate new requirements.
+              <span>{data.admin?.item3.span}</span> {data.admin?.item3.content}
             </motion.li>
           </motion.ul>
         </motion.div>

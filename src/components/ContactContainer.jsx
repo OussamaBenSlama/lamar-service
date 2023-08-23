@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState,useEffect} from 'react';
 import './Style/ContactContainer.css';
 import contactImg from '../images/building.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +15,23 @@ import {
   faLinkedin,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { useGlobalContext } from './GlobalProvider';
+import enData from './Labels/en.json';
+import frData from './Labels/fr.json'
 
 const ContactContainer = () => {
+
+  const { lang, setLang } = useGlobalContext();
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
+    if (lang === 'en') {
+      setData(enData);
+    } else {
+      setData(frData);
+    }
+  }, [lang]);
+
   const [contactHeaderRef, contactHeaderInView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -60,7 +75,7 @@ const ContactContainer = () => {
           animate={contactHeaderInView ? 'visible' : 'hidden'}
           variants={contactCardVariants}
         >
-          Contact us
+          {data.contact?.header}
         </motion.h1>
       </div>
       <div className='contact'>
@@ -76,7 +91,7 @@ const ContactContainer = () => {
             ref={socialMediaRef}
           >
             <div>
-              <p>contact us <br /> via our social media</p> <br />
+              <p>{data.contact?.header} <br /> {data.contact?.content}</p> <br />
               <span>
                 <FontAwesomeIcon icon={faFacebook} style={{ margin: '0.5rem' }} />
                 <FontAwesomeIcon icon={faInstagram} style={{ margin: '0.5rem' }} />
